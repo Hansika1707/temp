@@ -4,41 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      let users = [];
-      function showData() {
-        //alert("Hello World")
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let password = document.getElementById("password").value;
-        let dob = document.getElementById("dob").value;
-        //data.innerHTML = name + ", " +  email + ", " + password + ", " + dob
-        let user = {
-          name: name,
-          email: email,
-          password: password,
-          dob: dob,
-        };
-        users.push(user);
-        console.log(users);
-        let length = users.length;
-        let str = "";
-        for (let i = 0; i < length; i++) {
-          str = str + `<li>${users[i].name}-${users[i].email}-${users[i].password}-${users[i].dob}</li>`;
-        }
-        data.innerHTML = str
-        //data.innerHTML = `${name}, ${email}, ${password}, ${dob}`
-      }
-    </script>
   </head>
   <body>
-    <h1>facebook</h1>
-    <p><input type="text" id="name" placeholder="Enter Name" /></p>
-    <p><input type="text" id="email" placeholder="Enter Email Address" /></p>
-    <p><input type="password" id="password" placeholder="Enter Password" /></p>
-    <p><input type="date" id="dob" /></p>
-    <button onclick="showData()">Register</button>
+    <h1>Temp 3</h1>
+    <a href="temp2.html">Click</a>
+    <a href="temp2.html" target="_blank">Click</a>
+    <a href="temp2.html" target="frm">Click</a>
+    <a href="#about">Click</a>
+    <a href="#projects">Click</a>
     <hr />
-    <div id="data"></div>
+    <iframe name="frm" style="width:800px;height: 800px;border:none"></iframe>
+    <div id="about">
+      <h2>About me</h2>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolores
+      eveniet officiis iure quod. Facere ipsam sint nobis accusantium?
+      Voluptatibus harum nulla ullam maxime magnam incidunt doloremque est
+      eveniet dicta.
+    </div>
+    <img src="assets/images/meeting.jpg" alt="Meeting Image">
+    <div id="projects">
+        <h2>Projects</h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At dolores
+        eveniet officiis iure quod. Facere ipsam sint nobis accusantium?
+        Voluptatibus harum nulla ullam maxime magnam incidunt doloremque est
+        eveniet dicta.
+      </div>
   </body>
 </html>
