@@ -4,85 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <script>
+      let users = [];
+      function showData() {
+        //alert("Hello World")
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        //data.innerHTML = name + ", " +  email + ", " + password + ", " + dob
+        let user = {
+          name: name,
+          email: email,
+          password: password,
+          dob: dob,
+        };
+        users.push(user);
+        console.log(users);
+        let length = users.length;
+        let str = "";
+        for (let i = 0; i < length; i++) {
+          str = str + `<li>${users[i].name}-${users[i].email}-${users[i].password}-${users[i].dob}</li>`;
+        }
+        data.innerHTML = str
+        //data.innerHTML = `${name}, ${email}, ${password}, ${dob}`
+      }
+    </script>
   </head>
   <body>
-    <h1 style="color: blue">Temp 1</h1>
-    <fieldset>
-        <legend>Personal Info</legend>
-    <h6>Hello World</h6>
-    <ol>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-    </ol>
-    <ul>
-        <li>One</li>
-        <li>Two</li>
-        <li>Three</li>
-    </ul>
-</fieldset>
-    <fieldset>
-      <legend>Login</legend>
-      <form>
-   <p><input type="text" autofocus required maxlength="10" value="john@gmail.com" readonly></p> 
-   <p><input type="password" required></p>
-    <p>
-      <input type="checkbox" id="chk">
-      <label for="chk">Remember Me</label>
-    </p>
-    <button>Submit</button>
-</form>
-</fieldset>
-
-      <form>
-        <p><input type="text" id="txtName" /></p>
-        <p><input type="email" /></p>
-        <p><input type="number" /></p>
-        <p><input type="checkbox" />India<input type="checkbox" />USA</p>
-        <p>
-          <input type="radio" name="country" />India<input
-            type="radio"
-            name="country"
-          />USA
-        </p>
-        <p>
-          <select class="c1">
-            <optgroup label="India">
-              <option>Telangana</option>
-              <option>Andra Pradesh</option>
-              <option>Bengaluru</option>
-            </optgroup>
-            <optgroup label="USA">
-              <option>Florida</option>
-              <option>Ohio</option>
-              <option>Arizona</option>
-            </optgroup>
-          </select>
-        </p>
-
-        <p><textarea rows="4" columns="100"> </textarea></p>
-
-        <button class="c1 c2">Submit</button>
-      </form>
-    
-
-    <div>
-      <p>This is a paragraph</p>
-    </div>
-    <hr>
-    <form>
-      <p><input type="date"></p>
-      <p><input type="time"></p>
-      <p><input type="datetime-local"></p>
-      <p><input type="number"></p>
-      <p><input type="month"></p>
-      <p><input type="week"></p>
-      <p><input type="color"></p>
-      <p><input type="email"></p>
-      <p><input type="url"></p>
-      <p><input type="file"></p>
-      <button>Submit</button>
-    </form>
+    <h1>facebook</h1>
+    <p><input type="text" id="name" placeholder="Enter Name" /></p>
+    <p><input type="text" id="email" placeholder="Enter Email Address" /></p>
+    <p><input type="password" id="password" placeholder="Enter Password" /></p>
+    <p><input type="date" id="dob" /></p>
+    <button onclick="showData()">Register</button>
+    <hr />
+    <div id="data"></div>
   </body>
 </html>
